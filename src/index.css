@@ -1,0 +1,35 @@
+.nav-link:hover {
+  color: purple;
+  outline: 2px solid purple;
+  border-radius: 2px;
+}
+
+.carousel-inner {
+  box-shadow: -9px 10px 11px 0px rgba(158,150,158,1);
+}
+.btn.btn-primary {
+  background-color: #6f42c1;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  box-shadow: none;
+}
+
+.btn.btn-primary:hover {
+  background-color: #5e35b1;
+}
+
+.btn:active {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.my-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
