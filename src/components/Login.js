@@ -26,7 +26,7 @@ const Login = () => {
     console.log('in handlesubmit')
     const { phone, password } = user;
     console.log(phone, password)
-    const res = await fetch("https://mbackend-lilac.vercel.app/signin", {
+    const res = await fetch("https://mbackend-blush.vercel.app/signin", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
