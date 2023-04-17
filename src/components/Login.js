@@ -23,6 +23,7 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log('in handlesubmit')
     const { phone, password } = user;
     const res = await fetch("/signin", {
       method: "POST",
@@ -34,6 +35,7 @@ const Login = () => {
         password,
       }),
     });
+    console.log('after submit')
     const data = await res.json();
     if (res.status === 422 || !data) {
       console.log("ERROR LOGGING IN!");
