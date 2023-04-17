@@ -6,7 +6,7 @@ function ImageComponent() {
   useEffect(() => {
     const getImage = async () => {
       try {
-        const res = await fetch("/get-images");
+        const res = await fetch("https://mbackend-lilac.vercel.app/get-images");
         const data = await res.json();
 
         if (res.status === 500) {
