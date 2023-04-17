@@ -25,6 +25,7 @@ const Login = () => {
     e.preventDefault();
     console.log('in handlesubmit')
     const { phone, password } = user;
+    console.log(phone, password)
     const res = await fetch("/signin", {
       method: "POST",
       headers: {
