@@ -36,8 +36,9 @@ const Login = () => {
         password,
       }),
     });
-    console.log('after submit')
+    console.log('response:',res)
     const data = await res.json();
+    console.log('data:',data);
     if (res.status === 422 || !data) {
       console.log("ERROR LOGGING IN!");
       setError(data.error);
