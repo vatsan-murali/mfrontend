@@ -90,7 +90,7 @@ const Main = () => {
       formData.append("image", file);
 
       try {
-        const response = await axios.post("http://54.174.153.169/predict", formData, {
+        const response = await axios.post("http://44.211.176.112/predict", formData, {
         });
 
         setPrediction(response.data.prediction);
