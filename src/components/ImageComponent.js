@@ -9,11 +9,9 @@ function ImageComponent() {
         const res = await fetch("https://malaria-backend.onrender.com/get-images", {
         method: "GET",
         headers: {
-          
           Authorization: `Bearer ${token}`
-        },
-
-      }););
+        }
+      });
         const data = await res.json();
 
         if (res.status === 500) {
