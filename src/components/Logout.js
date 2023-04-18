@@ -6,7 +6,7 @@ const Logout = () => {
   const navigate = useNavigate();
   const {state, dispatch} = useContext(UserContext)
   useEffect(() => {
-     fetch("https://malaria-frontend.onrender.com/logout", {
+     fetch("/logout", {
         method: "GET",
         headers: {
           Accept: "application/json",
