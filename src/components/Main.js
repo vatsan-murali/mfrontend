@@ -18,7 +18,7 @@ const Main = () => {
 
     if (selectedChoice !== "") {
       try {
-        const res = await fetch("https://malaria-frontend.onrender.com/send-image", {
+        const res = await fetch("/send-image", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -42,7 +42,7 @@ const Main = () => {
   };
   const mainPage = async () => {
     try {
-      const res = await fetch("https://malaria-frontend.onrender.com/site", {
+      const res = await fetch("/site", {
         method: "GET",
         headers: {
           Accept: "application/json",
