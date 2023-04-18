@@ -18,7 +18,7 @@ const Main = () => {
 
     if (selectedChoice !== "") {
       try {
-        const res = await fetch("https://mbackend-blush.vercel.app/send-image", {
+        const res = await fetch("https://malaria-frontend.onrender.com/send-image", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -42,7 +42,7 @@ const Main = () => {
   };
   const mainPage = async () => {
     try {
-      const res = await fetch("https://mbackend-blush.vercel.app/site", {
+      const res = await fetch("https://malaria-frontend.onrender.com/site", {
         method: "GET",
         headers: {
           Accept: "application/json",
