@@ -12,7 +12,7 @@ const Logout = () => {
           Accept: "application/json",
           "Content-Type": "application/json",
         },
-        credentials: "include",
+//         credentials: "include",
       }).then((res) => {
        console.log(res)
         dispatch({type: "USER", payload:false})
