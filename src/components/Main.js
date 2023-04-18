@@ -15,13 +15,14 @@ const Main = () => {
   const handleRadioChange = async (event) => {
     const selectedChoice = event.target.value;
     setChoice(selectedChoice);
-
+    const token = localStorage.getItem("jwtoken");
     if (selectedChoice !== "") {
       try {
         const res = await fetch("https://malaria-backend.onrender.com/send-image", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`
           },
           body: JSON.stringify({
             imagePreviewUrl,
