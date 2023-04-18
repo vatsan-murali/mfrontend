@@ -6,7 +6,7 @@ function ImageComponent() {
   useEffect(() => {
     const getImage = async () => {
       try {
-        const res = await fetch("https://mbackend-blush.vercel.app/get-images");
+        const res = await fetch("https://malaria-frontend.onrender.com/get-images");
         const data = await res.json();
 
         if (res.status === 500) {
