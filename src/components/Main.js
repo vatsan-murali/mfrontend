@@ -42,11 +42,13 @@ const Main = () => {
   };
   const mainPage = async () => {
     try {
+      const token = localStorage.getItem("jwtoken");
       const res = await fetch("https://malaria-backend.onrender.com/site", {
         method: "GET",
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
         },
         credentials: "include",
       });
