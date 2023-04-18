@@ -14,12 +14,15 @@ const Logout = () => {
         },
         credentials: "include",
       }).then((res) => {
+       console.log(res)
         dispatch({type: "USER", payload:false})
        localStorage.removeItem("jwtoken");
-        navigate('/')
+       navigate('/')
         if (res.status !== 200) {
           const error = new Error(res.error);
           throw error;
+        }
+       
         }
       }).catch((e) => {
         console.log(e);
