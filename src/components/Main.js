@@ -96,7 +96,7 @@ const Main = () => {
       formData.append("image", file);
 
       try {
-        const response = await axios.post("https://44.203.69.189/predict", formData, {
+        const response = await axios.post("44.203.69.189/predict", formData, {
         });
 
         setPrediction(response.data.prediction);
