@@ -43,6 +43,10 @@ const Main = () => {
   const mainPage = async () => {
     try {
       const token = localStorage.getItem("jwtoken");
+      console.log('TOKEN IN MAIN PAGE FRONTEND',token)
+      if(!token){
+        navigate('/login')
+      }
       const res = await fetch("https://malaria-backend.onrender.com/site", {
         method: "GET",
         headers: {
@@ -50,7 +54,7 @@ const Main = () => {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
         },
-        credentials: "include",
+//         credentials: "include",
       });
 
       const data = await res.json();
