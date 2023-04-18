@@ -37,7 +37,7 @@ const SignUp = () => {
       console.log(recipient)
       if (isVerified) {
         const { username, phone, password, cpassword } = user;
-        const res = await fetch("https://malaria-frontend.onrender.com/register", {
+        const res = await fetch("/register", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -63,7 +63,7 @@ const SignUp = () => {
         // Verify OTP
         const { otp, phone, username } = user;
         try {
-          const res = await fetch("https://malaria-frontend.onrender.com/verifyOTP", {
+          const res = await fetch("/verifyOTP", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -85,7 +85,7 @@ const SignUp = () => {
 
         // Send OTP to phone number
         try {
-          const res = await fetch("https://malaria-frontend.onrender.com/sendOTP", {
+          const res = await fetch("/sendOTP", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -111,7 +111,7 @@ const SignUp = () => {
       recipient = phone;
       if (isVerified) {
         const { username, phone, password, cpassword } = user;
-        const res = await fetch("https://malaria-frontend.onrender.com/register", {
+        const res = await fetch("/register", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -137,7 +137,7 @@ const SignUp = () => {
         // Verify OTP
         const { otp, phone } = user;
         try {
-          const res = await fetch("https://malaria-frontend.onrender.com/verifyOTP", {
+          const res = await fetch("/verifyOTP", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -158,7 +158,7 @@ const SignUp = () => {
         try {
           const {username} = user
           console.log('inside sendotp')
-          const res = await fetch("https://malaria-frontend.onrender.com/send-email", {
+          const res = await fetch("/send-email", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ recipient, username, phone })
