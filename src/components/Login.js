@@ -38,7 +38,7 @@ const Login = () => {
     });
     console.log('response:',res)
     const data = await res.json();
-    console.log('data:',data);
+    console.log('data:',data.token);
     localStorage.setItem("jwtoken", data.token);
     if (res.status === 422 || !data) {
       console.log("ERROR LOGGING IN!");
