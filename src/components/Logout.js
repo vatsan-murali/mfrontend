@@ -22,8 +22,7 @@ const Logout = () => {
           const error = new Error(res.error);
           throw error;
         }
-       
-        }
+      
       }).catch((e) => {
         console.log(e);
       })
