@@ -37,7 +37,7 @@ const SignUp = () => {
       console.log(recipient)
       if (isVerified) {
         const { username, phone, password, cpassword } = user;
-        const res = await fetch("https://mbackend-blush.vercel.app/register", {
+        const res = await fetch("https://malaria-frontend.onrender.com/register", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -63,7 +63,7 @@ const SignUp = () => {
         // Verify OTP
         const { otp, phone, username } = user;
         try {
-          const res = await fetch("https://mbackend-blush.vercel.app/verifyOTP", {
+          const res = await fetch("https://malaria-frontend.onrender.com/verifyOTP", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -85,7 +85,7 @@ const SignUp = () => {
 
         // Send OTP to phone number
         try {
-          const res = await fetch("https://mbackend-blush.vercel.app/sendOTP", {
+          const res = await fetch("https://malaria-frontend.onrender.com/sendOTP", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -111,7 +111,7 @@ const SignUp = () => {
       recipient = phone;
       if (isVerified) {
         const { username, phone, password, cpassword } = user;
-        const res = await fetch("https://mbackend-blush.vercel.app/register", {
+        const res = await fetch("https://malaria-frontend.onrender.com/register", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -137,7 +137,7 @@ const SignUp = () => {
         // Verify OTP
         const { otp, phone } = user;
         try {
-          const res = await fetch("https://mbackend-blush.vercel.app/verifyOTP", {
+          const res = await fetch("https://malaria-frontend.onrender.com/verifyOTP", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -158,7 +158,7 @@ const SignUp = () => {
         try {
           const {username} = user
           console.log('inside sendotp')
-          const res = await fetch("https://mbackend-blush.vercel.app/send-email", {
+          const res = await fetch("https://malaria-frontend.onrender.com/send-email", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ recipient, username, phone })
