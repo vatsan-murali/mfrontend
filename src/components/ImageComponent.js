@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 
 function ImageComponent() {
   const [imageSrc, setImageSrc] = useState([]);
-
+  const token = localStorage.getItem('jwtoken')
   useEffect(() => {
+    
     const getImage = async () => {
       try {
         const res = await fetch("https://malaria-backend.onrender.com/get-images", {
