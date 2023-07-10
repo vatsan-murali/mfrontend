@@ -9,8 +9,8 @@ const ADM = () => {
   const handleImageChange = (event) => {
     const file = event.target.files[0];
     setSelectedImage(file);
-    setProcessedImage(null); // Reset the processed image when a new image is selected
-    setClassCounts(null); // Reset the class counts when a new image is selected
+    setProcessedImage(null); 
+    setClassCounts(null); 
   };
 
   const handleGenerateClick = () => {
@@ -19,21 +19,20 @@ const ADM = () => {
       formData.append("image", selectedImage);
 
       axios
-        .post("http://localhost:5000/advm", formData)
+        .post("http://ec2-52-90-176-103.compute-1.amazonaws.com/advm", formData)
         .then((response) => {
           // Handle the response from Flask
           console.log(response.data);
-          setProcessedImage(response.data.image); // Set the processed image received from Flask
+          setProcessedImage(response.data.image); 
           setClassCounts({
             trophozoite: response.data.trophozoite,
             ring: response.data.ring,
             schizont: response.data.schizont,
             gametocyte: response.data.gametocyte,
             all: response.data.all,
-          }); // Set the class counts received from Flask
+          }); 
         })
         .catch((error) => {
-          // Handle any errors
           console.error(error);
         });
     }
