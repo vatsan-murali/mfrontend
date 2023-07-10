@@ -9,6 +9,8 @@ import { initialState,reducer } from "../src/reducer/UseReducer";
 import Main from "./components/Main";
 import Logout from "./components/Logout";
 import ImageComponent from "./components/ImageComponent";
+import Menu from "./components/Menu";
+
 
 export const UserContext = createContext();
 
@@ -24,6 +26,7 @@ function App() {
         <Route path="/main" element={<Main />} />
         <Route path="/logout" element={<Logout />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/menu" element={<Menu />} />
         <Route path="/view" element={<ImageComponent />} />
         
       </Routes>
