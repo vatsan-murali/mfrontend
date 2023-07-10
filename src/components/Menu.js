@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import Main from "./Main";
-import HEC from "./HEC";
-import IHCC from "./IHCC";
 import ADM from "./ADM";
 
 const Menu = () => {
@@ -51,22 +49,22 @@ const Menu = () => {
             </button>
           </li>
 
-          <li>
-            <button
-              className="dropdown-item"
-              onClick={() => handleOptionSelect("he-to-ihc")}
-            >
-              HE to IHC
-            </button>
-          </li>
-          <li>
-            <button
-              className="dropdown-item"
-              onClick={() => handleOptionSelect("ihc-to-he")}
-            >
-              IHC to HE
-            </button>
-          </li>
+          // <li>
+          //   <button
+          //     className="dropdown-item"
+          //     onClick={() => handleOptionSelect("he-to-ihc")}
+          //   >
+          //     HE to IHC
+          //   </button>
+          // </li>
+          // <li>
+          //   <button
+          //     className="dropdown-item"
+          //     onClick={() => handleOptionSelect("ihc-to-he")}
+          //   >
+          //     IHC to HE
+          //   </button>
+          // </li>
         </ul>
       </div>
       {selectedOption === "malaria-detection" && (
@@ -79,16 +77,16 @@ const Menu = () => {
           <ADM />
         </div>
       )}
-      {selectedOption === "he-to-ihc" && (
-        <div>
-          <IHCC />
-        </div>
-      )}
-      {selectedOption === "ihc-to-he" && (
-        <div>
-          <HEC />
-        </div>
-      )}
+      // {selectedOption === "he-to-ihc" && (
+      //   <div>
+      //     <IHCC />
+      //   </div>
+      // )}
+      // {selectedOption === "ihc-to-he" && (
+      //   <div>
+      //     <HEC />
+      //   </div>
+      // )}
     </div>
   );
 };
