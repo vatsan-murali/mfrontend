@@ -19,7 +19,7 @@ const Body = () => {
           </p>
           <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
             <Link
-              to="/main"
+              to="/menu"
               class="btn btn-primary btn-lg px-4 me-sm-3"
             >
               Continue to app
