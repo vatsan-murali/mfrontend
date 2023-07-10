@@ -19,7 +19,7 @@ const ADM = () => {
       formData.append("image", selectedImage);
 
       axios
-        .post("http://ec2-52-90-176-103.compute-1.amazonaws.com/advm", formData)
+        .post("https://ec2-52-90-176-103.compute-1.amazonaws.com/advm", formData)
         .then((response) => {
           // Handle the response from Flask
           console.log(response.data);
