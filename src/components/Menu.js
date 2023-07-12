@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Main from "./Main";
+import HEC from "./HEC";
+import IHCC from "./IHCC";
 import ADM from "./ADM";
 
 const Menu = () => {
@@ -49,7 +51,7 @@ const Menu = () => {
             </button>
           </li>
 
-          {/* <li>
+          <li>
             <button
               className="dropdown-item"
               onClick={() => handleOptionSelect("he-to-ihc")}
@@ -64,7 +66,7 @@ const Menu = () => {
             >
               IHC to HE
             </button>
-          </li>*/}
+          </li>
         </ul>
       </div>
       {selectedOption === "malaria-detection" && (
@@ -77,16 +79,16 @@ const Menu = () => {
           <ADM />
         </div>
       )}
-{/* {selectedOption === "he-to-ihc" && (
+      {selectedOption === "he-to-ihc" && (
         <div>
-          <IHCC />
+          <HEC />
         </div>
       )}
       {selectedOption === "ihc-to-he" && (
         <div>
-          <HEC />
+          <IHCC />
         </div>
-       )} */}
+      )}
     </div>
   );
 };
