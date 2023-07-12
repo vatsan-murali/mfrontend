@@ -17,7 +17,7 @@ const ADM = () => {
       formData.append("image", selectedImage);
 
       axios
-        .post("http://localhost:5000/ihc_patch", formData)
+        .post("https://232a-34-230-74-206.ngrok-free.app/ihc_patch", formData)
         .then((response) => {
           console.log(response.data);
           setProcessedImage(response.data.image); 
