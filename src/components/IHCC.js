@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-const ADM = () => {
+const IHCC = () => {
+  const navigate = useNavigate();
   const [selectedImage, setSelectedImage] = useState(null);
   const [processedImage, setProcessedImage] = useState(null);
 
@@ -80,4 +82,4 @@ const ADM = () => {
   );
 };
 
-export default ADM;
+export default IHCC;
