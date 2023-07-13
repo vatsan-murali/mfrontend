@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const ADM = () => {
+  const navigate = useNavigate();
   const [selectedImage, setSelectedImage] = useState(null);
   const [processedImage, setProcessedImage] = useState(null);
   const [classCounts, setClassCounts] = useState(null);
