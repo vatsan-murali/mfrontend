@@ -1,9 +1,43 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-const ADM = () => {
+const HEC = () => {
+  let navigate = useNavigate();
   const [selectedImage, setSelectedImage] = useState(null);
   const [processedImage, setProcessedImage] = useState(null);
+
+  const mainPage = async () => {
+    try {
+      const token = localStorage.getItem("jwtoken");
+      console.log('TOKEN IN MAIN PAGE FRONTEND',token)
+      if(!token){
+        navigate('/login')
+      }
+      const res = await fetch("https://malaria-backend.onrender.com/site", {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+//         credentials: "include",
+      });
+
+      const data = await res.json();
+
+      if (res.status !== 200) {
+        const error = new Error(res.error);
+        throw error;
+      }
+    } catch (e) {
+      console.log(e);
+      navigate("/login");
+    }
+  };
+  useEffect(() => {
+    mainPage();
+  }, []);
 
   const handleImageChange = (event) => {
     const file = event.target.files[0];
@@ -80,4 +114,4 @@ const ADM = () => {
   );
 };
 
-export default ADM;
+export default HEC;
