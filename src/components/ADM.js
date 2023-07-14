@@ -53,7 +53,7 @@ const ADM = () => {
       formData.append("image", selectedImage);
 
       axios
-        .post(" https://999e-44-203-157-24.ngrok-free.app/advm", formData)
+        .post("https://e2ee-3-84-249-105.ngrok-free.app/advm", formData)
         .then((response) => {
           // Handle the response from Flask
           console.log(response.data);
