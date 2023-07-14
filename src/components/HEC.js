@@ -51,7 +51,7 @@ const HEC = () => {
       formData.append("image", selectedImage);
 
       axios
-        .post("https://999e-44-203-157-24.ngrok-free.app/ihc_patch", formData)
+        .post("https://e2ee-3-84-249-105.ngrok-free.app/ihc_patch", formData)
         .then((response) => {
           console.log(response.data);
           setProcessedImage(response.data.image); 
