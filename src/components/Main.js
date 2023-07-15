@@ -97,7 +97,7 @@ const Main = () => {
       formData.append("image", file);
 
       try {
-        const response = await axios.post("https://e2ee-3-84-249-105.ngrok-free.app/predict", formData, {
+        const response = await axios.post("https://c614-3-82-213-92.ngrok-free.app/predict", formData, {
         });
 
         setPrediction(response.data.prediction);
